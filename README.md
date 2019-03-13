@@ -10,15 +10,15 @@ This README will help guide you through the setup process, and allow you to run 
 
 ## Part 1 - Download Ubuntu ISO and set up Virtual Machine
 
-#### 1. Install VirtualBox
+### 1. Install VirtualBox
 
 - [Downloads - Oracle VM VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-#### 2. Download Ubuntu Server LTS Edition
+### 2. Download Ubuntu Server LTS Edition
 
 - [Download Ubuntu Server - Ubuntu Website](https://www.ubuntu.com/download/server)
 
-#### 3. Configure Ubuntu Server on Virtual Box
+### 3. Configure Ubuntu Server on Virtual Box
 
 1. Open VirtualBox -> Select `New` in top left corner.
 2. Set name to `UbuntuChef` and make sure Type is equal to `Linux` and Version is equal to `Ubuntu` (32/64-bit depending on your machine). Click Continue.
