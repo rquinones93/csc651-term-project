@@ -47,6 +47,14 @@ package 'auditd' do
   action :install
 end
 
+template '/etc/modprobe.d/dev-sec.conf' do
+  source 'filesystem_blacklisting.erb'
+  mode '0440'
+  owner 'root'
+  group 'root'
+  variables filesystems: %w[cramfs freevxfs jffs2 hfs hfsplus squashfs udf vfat]
+end
+
 # package-09 - Ensure prelink is disabled and not installed
 package 'prelink' do
   action :purge
