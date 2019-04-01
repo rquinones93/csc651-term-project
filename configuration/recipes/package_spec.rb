@@ -47,12 +47,19 @@ package 'auditd' do
   action :install
 end
 
-template '/etc/modprobe.d/dev-sec.conf' do
-  source 'filesystem_blacklisting.erb'
-  mode '0440'
-  owner 'root'
-  group 'root'
-  variables filesystems: %w[cramfs freevxfs jffs2 hfs hfsplus squashfs udf vfat]
+# CIS requirement: disable unused filesystems
+if node['configuration']['security']['kernel']['disable_filesystems'].empty?
+  file '/etc/modprobe.d/dev-sec.conf' do
+    action :delete
+  end
+else
+  template '/etc/modprobe.d/dev-sec.conf' do
+    source 'filesystem_blacklisting.erb'
+    mode 0440
+    owner 'root'
+    group 'root'
+    variables filesystems: node['configuration']['security']['kernel']['disable_filesystems']
+  end
 end
 
 # package-09 - Ensure prelink is disabled and not installed
