@@ -30,6 +30,6 @@ end
 describe user('dawit') do
   it { should exist }
   its('uid') { should eq 1234 }
-  its('home') { should eq '/dawit' }
+  its('home') { should eq '/home/dawit' }
   its('shell') { should eq '/bin/bash' }
 end
