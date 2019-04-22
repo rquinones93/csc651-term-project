@@ -26,3 +26,10 @@ end
 #     it { should be_directory }
 #   end
 # end
+
+describe user('dawit') do
+  it { should exist }
+  its('uid') { should eq 1234 }
+  its('home') { should eq '/dawit' }
+  its('shell') { should eq '/bin/bash' }
+end

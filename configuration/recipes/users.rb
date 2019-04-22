@@ -1,0 +1,47 @@
+#
+# Cookbook:: configuration
+# Recipe:: user
+#
+# Recipe to comply with Dev-Sec's Linux Security Baseline InSpec Tests
+# https://github.com/dev-sec/linux-baseline/blob/master/controls/os_spec.rb
+# Set proper kernel parameters for heightened security
+#
+# Copyright:: 2019, The Authors, All Rights Reserved.
+
+
+
+user 'dawit' do
+  comment 'dawit account'
+  uid '1234'
+  home '/home/dawit'
+  shell '/bin/bash'
+  password '$1$F39u4WzP$YxX14tSrJJNugChHrEb4B1'
+end
+
+
+user 'robert' do
+  comment 'robert account'
+  uid '1235'
+  home '/home/robert'
+  shell '/bin/bash'
+  password '$1$F39u4WzP$YxX14tSrJJNugChHrEb4B1'
+end
+
+
+
+user 'deven' do
+  comment 'deven account'
+  uid '1236'
+  home '/home/deven'
+  shell '/bin/bash'
+  password '$1$F39u4WzP$YxX14tSrJJNugChHrEb4B1'
+end
+
+
+user 'andrew' do
+  comment 'andrew account'
+  uid '1237'
+  home '/home/andrew'
+  shell '/bin/bash'
+  password '$1$F39u4WzP$YxX14tSrJJNugChHrEb4B1'
+end
