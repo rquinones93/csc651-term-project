@@ -12,6 +12,30 @@ describe file('/home/cheftest/testfile.txt') do
   it { should be_file }
   its('content') { should match 'CHECKING TO SEE!'}
 end
+
+describe file('/home/deven/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
+
+describe file('/home/andrew/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
+
+describe file('/home/robert/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
+
+describe file('/home/dawit/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
 # # you can also use plain tests
 # describe file('/tmp') do
 #   it { should be_directory }
@@ -33,3 +57,4 @@ describe user('dawit') do
   its('home') { should eq '/home/dawit' }
   its('shell') { should eq '/bin/bash' }
 end
+
