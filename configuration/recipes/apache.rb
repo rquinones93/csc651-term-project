@@ -47,3 +47,32 @@ node["learn_chef_apache2"]["sites"].each do |sitename, data|
   end
 
 end
+
+# Example for creating directories and importing file
+directory "/var/www/html/img" do
+  action :create
+end
+
+directory "/var/www/html/img/about" do
+  action :create
+end
+
+template "/var/www/html/img/about/1.jpg" do
+  source "img/about/1.jpg"
+  action :create
+end
+
+template "/var/www/html/img/about/2.jpg" do
+  source "img/about/2.jpg"
+  action :create
+end
+
+# template "/var/www/html/img/about/3.jpg" do
+#   source "img/about/3.jpg"
+#   action :create
+# end
+
+template "/var/www/html/img/about/4.jpg" do
+  source "img/about/4.jpg"
+  action :create
+end
