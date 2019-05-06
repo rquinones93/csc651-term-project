@@ -27,9 +27,95 @@ end
 #   end
 # end
 
-describe user('dawit') do
+# check for the existance of user
+describe user('dawit') do 
   it { should exist }
-  its('uid') { should eq 1234 }
+  its('uid') { should eq '1234'}
   its('home') { should eq '/home/dawit' }
   its('shell') { should eq '/bin/bash' }
 end
+
+describe user('deven') do 
+  it { should exist }
+  its('uid') { should eq '1236'}
+  its('home') { should eq '/home/deven' }
+  its('shell') { should eq '/bin/bash' }
+end
+
+describe user('robert') do 
+  it { should exist }
+  its('uid') { should eq '1235' }
+  its('home') { should eq '/home/robert' }
+  its('shell') { should eq '/bin/bash' }
+end
+
+describe user('andrew') do 
+  it { should exist }
+  its('uid') { should eq '1237' }
+  its('home') { should eq '/home/andrew' }
+  its('shell') { should eq '/bin/bash' }
+end
+
+# check for the existance of a group
+
+describe group('administrators') do
+  it { should exist }
+  its('gid') { should eq 001 }
+end
+
+describe group('stuff') do
+  it { should exist }
+  its('gid') { should eq 002 }
+end
+
+describe group('student') do
+  it { should exist }
+  its('gid') { should eq 003 }
+end
+
+describe group('sysadmin') do
+  it { should exist }
+  its('gid') { should eq 004 }
+end
+
+describe group('lecturer') do
+  it { should exist }
+  its('gid') { should eq 005 }
+end
+
+
+
+# Test if the path is a directory
+
+describe file('/home/dawit/testDirectory') do
+  its('type') { should eq :directory }
+  it { should be_directory }
+end
+
+describe file('/home/robert/testDirectory') do
+  its('type') { should eq :directory }
+  it { should be_directory }
+end
+
+describe file('/home/deven/testDirectory') do
+  its('type') { should eq :directory }
+  it { should be_directory }
+end
+
+describe file('/home/andrew/testDirectory') do
+  its('type') { should eq :directory }
+  it { should be_directory }
+end
+
+
+#
+# Cookbook:: configuration
+# Recipe:: user
+#
+# Recipe to comply with Dev-Sec's Linux Security Baseline InSpec Tests
+# https://github.com/dev-sec/linux-baseline/blob/master/controls/os_spec.rb
+# Set proper kernel parameters for heightened security
+#
+# Copyright:: 2019, The Authors, All Rights Reserved.
+
+

@@ -2,7 +2,7 @@ group '1234' do
   action :remove
 end
 
-group 'administrators' do
+group 'Administrators' do
   action :remove
 end
 
