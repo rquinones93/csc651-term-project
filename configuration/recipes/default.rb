@@ -14,6 +14,7 @@ include_recipe 'configuration::package_spec'
 include_recipe 'configuration::sysctl_spec'
 include_recipe 'configuration::groups'
 include_recipe 'configuration::users'
+include_recipe 'configuration::apache'
 
 # Install Apache and Enable
 apt_update 'Update the apt cache daily' do
