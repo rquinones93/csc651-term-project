@@ -7,8 +7,8 @@
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
 # Andrew's commit
-default["lamp_stack"]["sites"]["example.com"] = { "port" => 80, "servername" => "example.com", "serveradmin" => "webmaster@example.com" }
-default["lamp_stack"]["sites"]["example.org"] = { "port" => 80, "servername" => "example.org", "serveradmin" => "webmaster@example.org" }
+ default["learn_chef_apache2"]["sites"]["example.com"] = { "port" => 80, "servername" => "example.com", "serveradmin" => "webmaster@example.com" }
+ default["learn_chef_apache2"]["sites"]["example.org"] = { "port" => 80, "servername" => "example.org", "serveradmin" => "webmaster@example.org" }
 
 
 
