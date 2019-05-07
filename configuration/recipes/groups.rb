@@ -1,3 +1,9 @@
+#
+# Cookbook:: configuration
+# Recipe:: groups
+#
+# Copyright:: 2019, The Authors, All Rights Reserved.
+
 group '1234' do
     append true
     action :create

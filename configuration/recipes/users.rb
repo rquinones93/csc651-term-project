@@ -1,10 +1,6 @@
 #
 # Cookbook:: configuration
-# Recipe:: user
-#
-# Recipe to comply with Dev-Sec's Linux Security Baseline InSpec Tests
-# https://github.com/dev-sec/linux-baseline/blob/master/controls/os_spec.rb
-# Set proper kernel parameters for heightened security
+# Recipe:: users
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
