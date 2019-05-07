@@ -12,6 +12,54 @@ describe file('/home/cheftest/testfile.txt') do
   it { should be_file }
   its('content') { should match 'CHECKING TO SEE!'}
 end
+
+describe file('/home/deven/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
+
+describe file('/home/andrew/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
+
+describe file('/home/robert/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
+
+describe file('/home/dawit/testfile.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'CHECKING TO SEE!'}
+end
+
+describe file('/home/dawit/testTemplate.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'This is a test'}
+end
+
+describe file('/home/deven/testTemplate.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'This is a test'}
+end
+
+describe file('/home/robert/testTemplate.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'This is a test'}
+end
+
+describe file('/home/andrew/testTemplate.txt') do
+  it { should exist }
+  it { should be_file }
+  its('content') { should match 'This is a test'}
+end
 # # you can also use plain tests
 # describe file('/tmp') do
 #   it { should be_directory }
@@ -117,5 +165,4 @@ end
 # Set proper kernel parameters for heightened security
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
-
 
