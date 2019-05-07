@@ -1,3 +1,8 @@
+#
+# Cookbook:: configuration
+# Recipe:: directory
+#
+# Copyright:: 2019, The Authors, All Rights Reserved.
 
 # Robert
 directory '/home/robert/testDirectory' do
@@ -6,24 +11,28 @@ directory '/home/robert/testDirectory' do
   mode '0755'
   action :create
   end
+
 directory '/home/robert/Documents' do
   owner 'robert'
   group 'student'
   mode '0755'
   action :create
  end
+
 directory '/home/robert/Desktop' do
   owner 'robert'
   group 'student'
   mode '0755'
   action :create
 end
+
 directory '/home/robert/Applications' do
   owner 'robert'
   group 'student'
   mode '0755'
   action :create
 end
+
 directory '/home/robert/Downloads' do
   owner 'robert'
   group 'student'
@@ -31,8 +40,7 @@ directory '/home/robert/Downloads' do
   action :create
 end
 
-
-          # Deven
+# Deven
 directory '/home/deven/testDirectory' do
   owner 'deven'
   group 'student'
@@ -67,7 +75,7 @@ directory '/home/deven/Downloads' do
   mode '0755'
   action :create
 end
-          
+
 # Andrew
 directory '/home/andrew/testDirectory' do
   owner 'andrew'
@@ -76,14 +84,12 @@ directory '/home/andrew/testDirectory' do
   action :create
   end   
 
-
 directory '/home/andrew/Documents' do
   owner 'andrew'
   group 'student'
   mode '0755'
   action :create
 end
-
 
 directory '/home/andrew/Desktop' do
   owner 'andrew'
@@ -106,6 +112,7 @@ directory '/home/andrew/Downloads' do
     mode '0755'
     action :create
 end
+
 # Dawit
 directory '/home/dawit/testDirectory' do
     owner 'dawit'
@@ -114,32 +121,30 @@ directory '/home/dawit/testDirectory' do
     action :create
   end
 
-  directory '/home/dawit/Documents' do
-    owner 'dawit'
-    group '1234'
-    mode '0755'
-    action :create
-  end
-  directory '/home/dawit/Desktop' do
-    owner 'dawit'
-    group '1234'
-    mode '0755'
-    action :create
-  end
-  directory '/home/dawit/Applications' do
-    owner 'dawit'
-    group '1234'
-    mode '0755'
-    action :create
-  end
+directory '/home/dawit/Documents' do
+  owner 'dawit'
+  group '1234'
+  mode '0755'
+  action :create
+end
 
-  directory '/home/dawit/Downloads' do
-    owner 'dawit'
-    group '1234'
-    mode '0755'
-    action :create
-  end
+directory '/home/dawit/Desktop' do
+  owner 'dawit'
+  group '1234'
+  mode '0755'
+  action :create
+end
 
+directory '/home/dawit/Applications' do
+  owner 'dawit'
+  group '1234'
+  mode '0755'
+  action :create
+end
 
-
-
+directory '/home/dawit/Downloads' do
+  owner 'dawit'
+  group '1234'
+  mode '0755'
+  action :create
+end
