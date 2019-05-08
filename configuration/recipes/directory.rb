@@ -116,35 +116,35 @@ end
 # Dawit
 directory '/home/dawit/testDirectory' do
     owner 'dawit'
-    group '1234'
+    group 'student'
     mode '0755'
     action :create
   end
 
 directory '/home/dawit/Documents' do
   owner 'dawit'
-  group '1234'
+  group 'student'
   mode '0755'
   action :create
 end
 
 directory '/home/dawit/Desktop' do
   owner 'dawit'
-  group '1234'
+  group 'student'
   mode '0755'
   action :create
 end
 
 directory '/home/dawit/Applications' do
   owner 'dawit'
-  group '1234'
+  group 'student'
   mode '0755'
   action :create
 end
 
 directory '/home/dawit/Downloads' do
   owner 'dawit'
-  group '1234'
+  group 'student'
   mode '0755'
   action :create
 end

@@ -1,5 +1,5 @@
-# encoding: utf-8
-# copyright: 2018, The Authors
+# # encoding: utf-8
+# # copyright: 2018, The Authors
 
 title 'Configuration Cookbook Tests'
 
@@ -60,20 +60,20 @@ describe file('/home/andrew/testTemplate.txt') do
   it { should be_file }
   its('content') { should match 'This is a test'}
 end
-# # you can also use plain tests
-# describe file('/tmp') do
-#   it { should be_directory }
-# end
+# # # you can also use plain tests
+# # describe file('/tmp') do
+# #   it { should be_directory }
+# # end
 
-# # you add controls here
-# control 'tmp-1.0' do                        # A unique ID for this control
-#   impact 0.7                                # The criticality, if this control fails.
-#   title 'Create /tmp directory'             # A human-readable title
-#   desc 'An optional description...'
-#   describe file('/tmp') do                  # The actual test
-#     it { should be_directory }
-#   end
-# end
+# # # you add controls here
+# # control 'tmp-1.0' do                        # A unique ID for this control
+# #   impact 0.7                                # The criticality, if this control fails.
+# #   title 'Create /tmp directory'             # A human-readable title
+# #   desc 'An optional description...'
+# #   describe file('/tmp') do                  # The actual test
+# #     it { should be_directory }
+# #   end
+# # end
 
 # check for the existance of user
 describe user('dawit') do 
@@ -155,14 +155,4 @@ describe file('/home/andrew/testDirectory') do
   it { should be_directory }
 end
 
-
-#
-# Cookbook:: configuration
-# Recipe:: user
-#
-# Recipe to comply with Dev-Sec's Linux Security Baseline InSpec Tests
-# https://github.com/dev-sec/linux-baseline/blob/master/controls/os_spec.rb
-# Set proper kernel parameters for heightened security
-#
-# Copyright:: 2019, The Authors, All Rights Reserved.
-
+# # 
