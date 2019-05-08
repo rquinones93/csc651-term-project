@@ -47,6 +47,10 @@ package 'auditd' do
   action :install
 end
 
+template '/etc/audit/auditd.conf' do	
+  source	'auditd.conf.erb'
+end
+
 # CIS requirement: disable unused filesystems
 if node['configuration']['security']['kernel']['disable_filesystems'].empty?
   file '/etc/modprobe.d/dev-sec.conf' do

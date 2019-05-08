@@ -67,8 +67,8 @@ chef-run cheftest@127.0.0.1:2222 --password cheftest --sudo-password cheftest co
 inspec exec configuration-tests -t ssh://USERNAME:PASSWORD@IPtoSSHintoVM:PORT
 
 # Run DevSec Linux Baseline InSpec Profile
-inspec exec https://github.com/dev-sec/linux-baseline -t ssh://USERNAME:USERPASSWORD@VMsIP:SSHPORT
+inspec exec https://github.com/dev-sec/linux-baseline -t ssh://cheftest:cheftest@127.0.0.1:2222 --sudo --sudo-password cheftest
 
 # Example from my local machine
-inspec exec configuration-tests -t ssh://cheftest:cheftest@127.0.0.1:2222
+inspec exec configuration-tests -t ssh://cheftest:cheftest@127.0.0.1:2222 --sudo --sudo-password cheftest
 ```
