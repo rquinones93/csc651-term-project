@@ -57,6 +57,10 @@ directory "/var/www/html/img/about" do
   action :create
 end
 
+directory "/var/www/html/img/team" do
+  action :create
+end
+
 template "/var/www/html/img/about/1.jpg" do
   source "img/about/1.jpg"
   action :create
