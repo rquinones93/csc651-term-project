@@ -12,8 +12,6 @@ control 'apache' do
 
   describe package('apache2') do 
     it { should be_installed }
-    it { should be_enabled }
-    it { should be_running }
   end
 
   describe file("/var/www/html/img") do
