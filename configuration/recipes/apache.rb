@@ -1,4 +1,4 @@
-#Install & enable Apache
+# #Install & enable Apache
 
 package "apache2" do
   action :install
@@ -9,7 +9,7 @@ service "apache2" do
 end
 
 
-# Virtual Hosts Files
+# # Virtual Hosts Files
 
 node["learn_chef_apache2"]["sites"].each do |sitename, data|
   document_root = "/var/www/html/#{sitename}"
@@ -48,6 +48,11 @@ node["learn_chef_apache2"]["sites"].each do |sitename, data|
 
 end
 
+template '/var/www/html/index.html' do
+  source 'index.html.erb'
+  action :create
+end
+
 # Example for creating directories and importing file
 directory "/var/www/html/img" do
   action :create
@@ -61,6 +66,10 @@ directory "/var/www/html/img/team" do
   action :create
 end
 
+directory "/var/www/html/css" do
+  action :create
+end
+
 template "/var/www/html/img/about/1.jpg" do
   source "img/about/1.jpg"
   action :create
@@ -71,10 +80,10 @@ template "/var/www/html/img/about/2.jpg" do
   action :create
 end
 
-# template "/var/www/html/img/about/3.jpg" do
-#   source "img/about/3.jpg"
-#   action :create
-# end
+template "/var/www/html/img/about/3.jpg" do
+  source "img/about/3.jpg"
+  action :create
+end
 
 template "/var/www/html/img/about/4.jpg" do
   source "img/about/4.jpg"
