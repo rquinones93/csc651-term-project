@@ -76,3 +76,36 @@ template "/var/www/html/img/about/4.jpg" do
   source "img/about/4.jpg"
   action :create
 end
+
+
+# Adding Team member pictures
+template "/var/www/html/img/team/0.jpg" do
+  source "img/team/0.jpg"
+  action :create
+end
+
+template "/var/www/html/img/team/1.jpg" do
+  source "img/team/1.jpg"
+  action :create
+end
+
+template "/var/www/html/img/team/2.jpg" do
+  source "img/team/2.jpg"
+  action :create
+end
+
+template "/var/www/html/img/team/3.jpg" do
+  source "img/team/3.jpg"
+  action :create
+end
+
+# Adding css directories to templates
+template "/var/www/html/css/agency.min.css" do
+  source "css/agency.min.css"
+  action :create
+end
+
+template "/var/www/html/css/agency.css" do
+  source "css/agency.css"
+  action :create
+end
