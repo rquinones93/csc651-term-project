@@ -26,6 +26,10 @@ directory "/var/www/html/img/team" do
   action :create
 end
 
+cookbook_file "var/www/html/img/header-bg.jpg" do
+  source "img/header-bg.jpg"
+end
+
 cookbook_file "/var/www/html/img/about/1.jpg" do
   source "img/about/1.jpg"
   action :create
