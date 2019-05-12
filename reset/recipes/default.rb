@@ -8,4 +8,7 @@
 include_recipe 'reset::os_spec_reset'
 include_recipe 'reset::package_spec_reset'
 include_recipe 'reset::sysctl_spec_reset'
+include_recipe 'reset::groups'
+include_recipe 'reset::directory'
+include_recipe 'reset::files'
 include_recipe 'reset::users'

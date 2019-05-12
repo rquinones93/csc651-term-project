@@ -1,13 +1,13 @@
 #
 # Cookbook:: configuration
-# Recipe:: user
-#
-# Recipe to comply with Dev-Sec's Linux Security Baseline InSpec Tests
-# https://github.com/dev-sec/linux-baseline/blob/master/controls/os_spec.rb
-# Set proper kernel parameters for heightened security
+# Recipe:: users
 #
 # Copyright:: 2019, The Authors, All Rights Reserved.
 
+# Make ChefTest a sudoer
+sudo 'cheftest' do
+  user 'cheftest'
+end
 
 user 'dawit' do
   comment 'dawit account'
@@ -20,6 +20,10 @@ user 'dawit' do
   action :create
 end
 
+# Make Home Directory Readable to other users, needed for testing
+directory '/home/dawit' do
+  mode '0755'
+end
 
 user 'robert' do
   comment 'robert account'
@@ -30,6 +34,11 @@ user 'robert' do
   password '$1$F39u4WzP$YxX14tSrJJNugChHrEb4B1'
   system true
   action :create
+end
+
+# Make Home Directory Readable to other users, needed for testing
+directory '/home/robert' do
+  mode '0755'
 end
 
 user 'deven' do
@@ -43,6 +52,11 @@ user 'deven' do
   action :create
 end
 
+# Make Home Directory Readable to other users, needed for testing
+directory '/home/deven' do
+  mode '0755'
+end
+
 user 'andrew' do
   comment 'andrew account'
   uid '1237'
@@ -54,3 +68,7 @@ user 'andrew' do
   action :create
 end
 
+# Make Home Directory Readable to other users, needed for testing
+directory '/home/andrew' do
+  mode '0755'
+end
